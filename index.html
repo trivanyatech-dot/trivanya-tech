@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivanya Tech</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff}
+
+header{display:flex;justify-content:space-between;padding:20px 60px;position:fixed;width:100%;top:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);z-index:1000}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:40px}
+nav a{color:#ccc;margin-left:25px;text-decoration:none}
+nav a:hover{color:#fff}
+
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle,#1a1a40,#000);padding:0 20px}
+.hero h2{font-size:60px}
+.hero p{max-width:650px;color:#aaa}
+
+.btn{margin-top:20px;padding:14px 30px;border-radius:30px;background:linear-gradient(90deg,#007cf0,#00dfd8);color:#fff;text-decoration:none;display:inline-block;transition:.3s}
+.btn:hover{transform:scale(1.05)}
+
+.section{padding:120px 60px;opacity:0;transform:translateY(50px)}
+.section.show{opacity:1;transform:translateY(0);transition:1s}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.card{background:#111;padding:30px;border-radius:20px;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-10px)}
+.card img{width:90px;margin-bottom:15px}
+
+.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.portfolio img{width:100%;border-radius:15px;transition:.3s}
+.portfolio img:hover{transform:scale(1.05)}
+
+.about-text{max-width:100%;color:#bbb;line-height:1.8;font-size:18px}
+
+.contact-wrap{display:flex;gap:40px;flex-wrap:wrap}
+form{flex:1;display:flex;flex-direction:column;gap:12px}
+input,textarea{padding:12px;border-radius:8px;border:none}
+.info{flex:1;background:#111;padding:25px;border-radius:20px}
+
+.footer{text-align:center;padding:40px;color:#777}
+
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:768px){.hero h2{font-size:36px}header{padding:20px}.section{padding:80px 20px}}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="images/logo.png">
+<h3>Trivanya Tech</h3>
+</div>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Work</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Engineering the Future</h2>
+<p>We build websites, mobile apps and AI solutions that help your business grow faster. From idea validation to full-scale deployment, we ensure every product is fast, scalable, and designed to deliver real business results.</p>
+<a href="#contact" class="btn">Contact Us</a>
+</section>
+
+<section id="services" class="section">
+<h2>What We Do</h2>
+<div class="services">
+<div class="card"><img src="images/web.png"><h3>Web Development</h3><p>Modern websites & e-commerce platforms built for performance, speed, and conversions. We focus on user experience, SEO, and scalability so your business can grow without limitations.</p></div>
+<div class="card"><img src="images/app.png"><h3>Mobile Apps</h3><p>Android & iOS apps with great UX, smooth performance, and modern design. We create applications that users love and businesses rely on for growth.</p></div>
+<div class="card"><img src="images/ai.png"><h3>AI Solutions</h3><p>Automation, machine learning, and data-driven systems that improve efficiency and decision-making. We help you turn raw data into actionable insights.</p></div>
+<div class="card"><img src="images/support.png"><h3>Support</h3><p>Maintenance, optimization, and scaling services to ensure your systems run smoothly and handle growth without issues.</p></div>
+</div>
+</section>
+
+<section id="portfolio" class="section">
+<h2>Our Work</h2>
+<div class="portfolio">
+<img src="images/p1.jpg">
+<img src="images/p2.jpg">
+<img src="images/p3.jpg">
+</div>
+</section>
+
+<section id="about" class="section">
+<h2>About Us</h2>
+<p class="about-text">Trivanya Tech is a modern technology startup focused on delivering complete digital solutions. We work with startups, small businesses, and growing companies to build strong digital foundations. We help businesses build websites, mobile apps, and AI systems that scale. Our approach combines design, development, and data intelligence to create impactful products. Our mission is to turn ideas into powerful digital products and help startups grow with the right technology.</p>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<div class="contact-wrap">
+<form action="https://formspree.io/f/yourformid" method="POST">
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="tel" name="phone" placeholder="Phone" required>
+<textarea name="message" placeholder="Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+
+<div class="info">
+<h3>Let’s Work Together</h3>
+<p>We create high-quality digital solutions tailored to your business goals. Whether you need a new website, a mobile app, or an AI system, we provide end-to-end support from planning to deployment.</p>
+<p>Email: trivanyatech@gmail.com</p>
+<p>Phone: +91-XXXXXXXXXX</p>
+</div>
+</div>
+</section>
+
+<div class="footer">
+<p>© 2026 Trivanya Tech</p>
+</div>
+
+<script>
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+sections.forEach(sec=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-100){sec.classList.add('show')}
+})
+})
+</script>
+
+</body>
+</html>
