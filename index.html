@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trivanya Tech</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -44,9 +46,11 @@ input,textarea{padding:12px;border-radius:8px;border:none}
 
 .footer{text-align:center;padding:40px;color:#777}
 
-@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-
-@media(max-width:768px){.hero h2{font-size:36px}header{padding:20px}.section{padding:80px 20px}}
+@media(max-width:768px){
+.hero h2{font-size:36px}
+header{padding:20px}
+.section{padding:80px 20px}
+}
 </style>
 </head>
 
@@ -54,7 +58,7 @@ input,textarea{padding:12px;border-radius:8px;border:none}
 
 <header>
 <div class="logo">
-<img src="images/logo.png">
+<img src="logo.png">
 <h3>Trivanya Tech</h3>
 </div>
 <nav>
@@ -75,30 +79,61 @@ input,textarea{padding:12px;border-radius:8px;border:none}
 <section id="services" class="section">
 <h2>What We Do</h2>
 <div class="services">
-<div class="card"><img src="images/web.png"><h3>Web Development</h3><p>Modern websites & e-commerce platforms built for performance, speed, and conversions. We focus on user experience, SEO, and scalability so your business can grow without limitations.</p></div>
-<div class="card"><img src="images/app.png"><h3>Mobile Apps</h3><p>Android & iOS apps with great UX, smooth performance, and modern design. We create applications that users love and businesses rely on for growth.</p></div>
-<div class="card"><img src="images/ai.png"><h3>AI Solutions</h3><p>Automation, machine learning, and data-driven systems that improve efficiency and decision-making. We help you turn raw data into actionable insights.</p></div>
-<div class="card"><img src="images/support.png"><h3>Support</h3><p>Maintenance, optimization, and scaling services to ensure your systems run smoothly and handle growth without issues.</p></div>
+<div class="card">
+<img src="web.png">
+<h3>Web Development</h3>
+<p>Modern websites & e-commerce platforms built for performance, speed, and conversions.</p>
+</div>
+
+<div class="card">
+<img src="app.png">
+<h3>Mobile Apps</h3>
+<p>Android & iOS apps with great UX and smooth performance.</p>
+</div>
+
+<div class="card">
+<img src="ai.png">
+<h3>AI Solutions</h3>
+<p>Automation, machine learning, and data-driven systems.</p>
+</div>
+
+<div class="card">
+<img src="support.png">
+<h3>Support</h3>
+<p>Maintenance, optimization, and scaling services.</p>
+</div>
 </div>
 </section>
 
 <section id="portfolio" class="section">
 <h2>Our Work</h2>
 <div class="portfolio">
-<img src="images/p1.jpg">
-<img src="images/p2.jpg">
-<img src="images/p3.jpg">
+<img src="p1.jpg">
+<img src="p2.jpg">
+<img src="p3.jpg">
 </div>
 </section>
 
 <section id="about" class="section">
 <h2>About Us</h2>
-<p class="about-text">Trivanya Tech is a modern technology startup focused on delivering complete digital solutions. We work with startups, small businesses, and growing companies to build strong digital foundations. We help businesses build websites, mobile apps, and AI systems that scale. Our approach combines design, development, and data intelligence to create impactful products. Our mission is to turn ideas into powerful digital products and help startups grow with the right technology.</p>
+<p class="about-text">
+    Trivanya Tech is a modern technology startup focused on delivering complete digital solutions for businesses of all sizes. We specialize in building high-performance websites, scalable mobile applications, and intelligent AI-driven systems that help companies grow faster in today’s digital world.
+    
+    Our team combines creativity, technology, and data-driven strategies to create products that are not only visually appealing but also highly functional and result-oriented. From startups launching their first product to businesses scaling their operations, we provide end-to-end solutions tailored to your goals.
+    
+    We believe in innovation, quality, and long-term partnerships. Every project we take is built with precision, performance, and future scalability in mind. Our mission is to turn ideas into powerful digital products that drive real business success.
+    
+    At Trivanya Tech, we don’t just build software — we build solutions that create impact, improve efficiency, and unlock new growth opportunities for our clients.
+    </p>
 </section>
+
+
+
 
 <section id="contact" class="section">
 <h2>Contact Us</h2>
 <div class="contact-wrap">
+
 <form action="https://formspree.io/f/yourformid" method="POST">
 <input type="text" name="name" placeholder="Name" required>
 <input type="email" name="email" placeholder="Email" required>
@@ -109,10 +144,11 @@ input,textarea{padding:12px;border-radius:8px;border:none}
 
 <div class="info">
 <h3>Let’s Work Together</h3>
-<p>We create high-quality digital solutions tailored to your business goals. Whether you need a new website, a mobile app, or an AI system, we provide end-to-end support from planning to deployment.</p>
+<p>We create high-quality digital solutions tailored to your business goals.</p>
 <p>Email: trivanyatech@gmail.com</p>
 <p>Phone: +91-XXXXXXXXXX</p>
 </div>
+
 </div>
 </section>
 
@@ -124,10 +160,13 @@ input,textarea{padding:12px;border-radius:8px;border:none}
 const sections=document.querySelectorAll('.section');
 window.addEventListener('scroll',()=>{
 sections.forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){sec.classList.add('show')}
+if(sec.getBoundingClientRect().top<window.innerHeight-100){
+sec.classList.add('show')
+}
 })
 })
 </script>
 
 </body>
 </html>
+
